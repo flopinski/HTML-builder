@@ -4,4 +4,4 @@ const fs = require('fs'),
 
 stream.on('data', (chunk) => {
   console.log(chunk);
-})
+});
