@@ -1,9 +1,9 @@
 const fs = require('fs'),
-  path = require('path'),
-  fsPromises = require('fs/promises'),
-  readStylesFolder = path.resolve(__dirname, 'styles'),
-  resultFolder = path.resolve(__dirname, 'project-dist'),
-  bundle = fs.createWriteStream(path.resolve(resultFolder, 'bundle.css'));
+      path = require('path'),
+      fsPromises = require('fs/promises'),
+      readStylesFolder = path.resolve(__dirname, 'styles'),
+      resultFolder = path.resolve(__dirname, 'project-dist'),
+      bundle = fs.createWriteStream(path.resolve(resultFolder, 'bundle.css'));
 
 
 const mergeStyles = async () => {
