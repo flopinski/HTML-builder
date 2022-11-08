@@ -34,7 +34,7 @@ const buildHtml = async () => {
 
 
 const mergeStyles = async () => {
-  const bundle = fs.createWriteStream(path.resolve(resultFolder, 'bundle.css')),
+  const bundle = fs.createWriteStream(path.resolve(resultFolder, 'style.css')),
     stylesArr = await fsPromises.readdir(stylesFolder, { withFileTypes: true });
 
   stylesArr.forEach(styleFile => {
@@ -75,7 +75,7 @@ const buildPage = async () => {
   await fsPromises.mkdir(path.resolve(__dirname, 'project-dist'), { recursive: true });
   await mergeStyles();
   await copyDirectory(assetsFolder, assetsFolderNew);
-  await buildHtml;
+  await buildHtml();
 }
 
 buildPage()
